@@ -18,10 +18,12 @@
 		//거기에서 입력한 값은 value라는 속성으로 뽑아낸다.
 		let value2 = document.getElementById("num2").value;
 		
-		let result = value1 + value2;
+		console.log(typeof value1);
+		console.log(typeof value2);
+		
+		let result = Number(value1) + parseInt(value2);
 		document.querySelector("#result").innerHTML = result;
 	}
 </script>
-	
 </body>
 </html>
