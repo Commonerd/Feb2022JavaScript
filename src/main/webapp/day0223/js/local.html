@@ -6,12 +6,12 @@
 </head>
 <body>
 <script>
-	let scope = "grobal"; 
+	let scope = "grobal"; //전역변수
 	function f1() {
-		let scope = "local";
+		let scope = "local";//지역변수
 		//scope = "local"일때는 출력값이 local이었다.
 		//그런데 왜 let scope = "local"로 하면 값이 grobal이 나오는가?
-		//let scope를 통해 지역변수화되었기 때문이다? 
+		//let scope를 통해 지역변수화되었기 때문이다? 맞다
 	} 
 	f1();
 	document.write(scope);

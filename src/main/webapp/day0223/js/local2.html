@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		let scope = "global"
+		function checkscope(){
+			scope = "local";
+			document.write(scope);
+			myscope = "mylocal";//지역변수 선언시 let/var 없으면 전역변수가 됨
+			document.write(myscope);
+		}
+		checkscope();//local, mylocal
+		document.write(scope);//local
+		document.write(myscope);//mylocal
+		
+	</script>
+</body>
+</html>

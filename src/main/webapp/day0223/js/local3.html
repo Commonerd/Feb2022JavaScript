@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	let scope = "global";
+	function check(){
+		let scope ="local";
+		function nested(){
+			let scope = "nest";
+			document.write(scope);
+		}
+			document.write(scope);
+			nested();//여기서 nest 출력
+	}
+	check();//local
+	nested();//nested이제 없는데? 여기서 중지.
+	//그래서 아래 스코프 실행이 안됨.
+	document.write(scope);
+</script>
+</body>
+</html>
