@@ -7,15 +7,19 @@
 <body>
 	<script>
 		let a = "true";
-		let b = "false";
+		let b = eval("false");
 		
 		if(a){
 			document.write("a는 true");
 		}else{
 			document.write("a는 false");
 		}
-		document.write("<br>");
-		if(b){
+		document.write("<br>"); //그대로 줄을 바꾼다.
+		if(b){ 
+			//서버에서 false의 값을 보냈지만, 인터넷망을 통해 문자열 false로 바뀌었고,
+			//다시 if문 안에 집어넣으니까 true가 됐다.
+			//그럼 불리온 타입인 false로 받으려면 어떻게 해야 할까?
+			//let b = eval("false");
 			document.write("b는 true");
 		}else{
 			document.write("b는 false");
