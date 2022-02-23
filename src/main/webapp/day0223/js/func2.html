@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<p id="target1"></p>
+<p id="target2"></p>
+<script>
+	function showMessage(name,position){
+		document.querySelector("#target1").innerHTML
+			= name+" "+position+"님 안녕하세요.";
+	}
+	showMessage("킴","부장");
+	
+	function showMessage2(id,name,position="사원"){ 
+		//position에 디폴트값이 선언됨. 즉 포지션에 값을 안넣으면 "사원"이 출력됨.
+		//만약 함수의 이름이 같으면 마지막에 있는 함수가 출력됨
+		//자바스크립트는 자바의 오버로딩과 다르다.
+		let pid = "#"+id;
+		//지역변수는 선언된 함수 안에서만 사용 가능. 
+		document.querySelector(pid).innerHTML
+		= name+" "+position+"님 안녕하세요.";
+	}
+	showMessage2("target2","킴","대리");
+</script>
+</body>
+</html>
