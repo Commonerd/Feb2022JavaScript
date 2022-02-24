@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		let user = { 
+			name:"scott", 
+			password:"tiger",
+			age:"20"
+		};
+	
+		for (key in user) {
+			document.write(key +" : "+ user[key]+"<br>");
+		}
+		
+		document.write('<br>');
+		
+		let fruit = {
+				3:"mango", //key값으로 뽑아내면, 3,1,2여도 1,2,3으로 출력된다.
+				1:"apple", 
+				2:"tomato"
+		};
+		document.write('<br>');
+
+		if(3 in fruit){//in : 프로퍼티 유무 체크. in 절 안에 객체 이름 적고, 그 앞에 이름 적으면 해당 이름유무 체크.
+			document.write(fruit['3']); // fruit.3 이렇게 쓰면 안된다. 프로퍼티명은 숫자로만 이루어질 수 없다. 
+		}
+		document.write('<br>');
+
+		for (key in fruit) {
+			document.write(key +" : "+fruit[key]+"<br>");
+		}
+
+		document.write('<br>');
+
+		let code = { "+82":"대한민국", "+81":"일본","+1":"미국", "+7":"러시아"};
+		// 숫자를 따옴표 쳐도 숫자로 인식되어버렸다. 그래서 숫자 앞에서 +를 붙였다.
+		for (key in code) {
+			document.write(key +" : " + code[key]+"<br>");
+		}
+		
+	</script>
+</body>
+</html>

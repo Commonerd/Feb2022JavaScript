@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	let message = "Hello";
+	let copy = message;
+	
+	document.write("message : "+message); //Hello
+	document.write("<br>");
+	document.write("copy : "+copy); //Hello
+	document.write("<br>");
+	
+	message = "byebye!";
+	document.write("message : "+message); // byebye!
+	document.write("<br>");
+	document.write("copy : "+copy); //Hello
+	document.write("<br><br>");
+	
+	let user = {name:"jin"};
+	let admin = user; //객체는 복사되지 않는다. '참조값'만 복사된다.
+	document.write("admin.name "+admin.name);
+	document.write("<br>");
+	
+	user.name="Anna";
+	document.write("admin.name "+admin.name); //
+	document.write("<br>");
+	document.write("user.name "+user.name); //Anna
+	//복한데이터인 객체를 넘겨주면, 객체에는 참조값을 받고, 참조값을 유저에게도, 어드민에게도 준다.
+	//즉 진이라는 네임프로퍼티 가진 애를 하나만 만들어 놓고, 유저도, 어드민도 네임프로퍼티의 진을 가리킨다.
+	// 
+</script>
+</body>
+</html>
