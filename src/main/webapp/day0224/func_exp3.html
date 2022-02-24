@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	"use strict";
+	//strict 모드로 설정. "보안"자바스크립트를 작성, 
+	//"올바르지 않은 문법"을 사전에 검출
+	let age = 10;
+	//변수에 저장해두면 밖에서도 사용할 수 있다.
+	let welcome;
+	
+	if(age < 18){
+		welcome = function welcome(){//if문 안에 함수는 if문 안에서만 쓰는 거(원래는). 
+			//현재 strict모드 적용중
+			//welcome에 function을 저장하고 있음. 
+			alert('안녕');
+		}
+		
+	}else{
+		function welcome(){
+			alert("안녕하세요");
+		}
+		//welcome();
+	}
+	welcome(); //중괄호 영역에 선언된 함수는 선언된 영역에서만 사용할 수 있음.
+</script>
+</body>
+</html>

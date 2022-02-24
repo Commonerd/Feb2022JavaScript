@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+//화살표 함수로 변경(익명함수만 가능)
+function ask(question, yes, no) {
+	  if (confirm(question)) yes()
+	  else no();
+	}
+
+	/* ask( //화살표 함수는 '익명함수'만 가능하다!
+	  "동의하십니까?",
+	  function() { alert("동의하셨습니다."); },
+	  function() { alert("취소 버튼을 누르셨습니다."); }
+	);
+	 */
+	//위의 실행문을 애로우 함수로 변환해보기
+	 ask( //화살표 함수는 '익명함수'만 가능하다!
+			  "동의하십니까?",
+			() => alert("동의하셨습니다."),
+			() => alert("취소 버튼을 누르셨습니다.")
+		);
+</script>
+</body>
+</html>

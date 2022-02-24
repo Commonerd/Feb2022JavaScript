@@ -10,11 +10,11 @@ document.write(sum1(1,2));
 document.write("<br>");
 document.write(sum2(10,20));
 
-	function sum1(a,b) {
+	function sum1(a,b) { //선언식이기 때문에 호이스팅됨
 		return a + b;		
 	}
 	
-	let sum2 = function(a,b){
+	let sum2 = function(a,b){//표현식이기 떄문에 호이스팅 안됨
 		return a + b;
 	}
 	
