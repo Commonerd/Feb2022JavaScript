@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	function sayHi1() {
+		alert("hi");
+	}
+	
+	let sayHi2 = function say() {
+		alert("h12");
+		return "Hi2";
+	}
+	//alert(say());
+	alert(sayHi1); //괄호없이 부르면 그냥 노출됨
+	alert(sayHi2); //괄호없이 부르면 그냥 노출됨
+	alert(sayHi2()); //괄호있게 부르면 함수호출
+	//리턴값이 없으니까 undefined가 돌아옴.
+	//그 값을 출력하고 있기 때문에.
+</script>
+</body>
+</html>
