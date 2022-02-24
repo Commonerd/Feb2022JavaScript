@@ -6,11 +6,40 @@
 </head>
 <body>
 <script>
-	function User(name){
-		this.name = name;
-		this.getName = function(){ return this.name;}
-		this.setName = function(n){ this.name = n;}
+	function User(name){ 
+	// this = {};
+	this.name = name; 
+	// this.getName = () => this.name;
+	// this.setName = n => this.name = n;
 	}
+	User.prototype.getName = function(){ return this.name}; //() => this.name; //원래는 function(){ return this.name};
+	User.prototype.setName = function(n){this.name = n}; //n => this.name = n; //원래는 function(n){this.name = n};
+	
+	let user1 = new User("jskim");
+	document.write(user1.getName()+"<br>");
+
+	user1.setName("jin");
+	document.write(user1.getName()+"<br>");
+
+	let user2 = new User("자바킴");
+	document.write(user2.getName()+"<br>");
+
+	
+/* function User(name){ //생성자함수
+		// this = {};
+		this.name = name; 
+		this.getName = () => this.name;
+		this.setName = n => this.name = n;
+	} */
+	//같은 프로퍼티 가진 거 여러개 만들어야 한다면 생성자함수
+	//하나만 할 거면 리터럴 함수를 만들 것.
+	//생성자는 리턴문 쓸 수는 있지만, 어지간하면 쓰지 마라.
+	//화살표함수는 리턴생략가능
+
+/* 	let user1 = new User("javakim");
+	document.write(user1.getName());
+	user1.setName("jin");
+	document.write(user1.getName()); */
 	
 </script>
 </body>
