@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<div id="target1"></div>
+	<div id="target2"></div>
+	<div id="target3"></div>
+	<div id="target4"></div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+	<script>
+	//moment() : moment 인스턴스를 생성
+	//format() : moment 인스턴스의 날짜/시간 출력 형태를 변경할 때 사용
+		console.log(moment.locale("ko"));
+		console.log(momoent.locale())
+		document.getElementById("target1").innerHTML 
+		= moment().format();
+		//moment를쓰면 오늘짜 현재시간값 꺼내오고 포맷을 통해 쭉...
+		//moment() : moment 인스턴스를 생성
+		//format() : moment 인스턴스의 날짜/시간 출력 형태를 변경할 때 사용
+		let t1 = moment('2022-02-15');
+		document.getElementById("target2").innerHTML = t1.format();
+
+		let t2 = moment('22-02-2022', 'DD-MM-YYYY');//모먼트 객체를 만듦.
+		document.getElementById("target3").innerHTML = t2.format();
+	</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script>
+//add(숫자, '단위')
+//substract(숫자,'단위')
+document.write(moment().add(7,'days').format('YYYY-MM-DD')+"<br>");
+							//s붙이는 거 잊지 말기.
+document.write(moment().add(7,'days').add(1,'months').format('YYYY-MM-DD')+"<br>");
+document.write(moment().add(1,'years').format('YYYY-MM-DD')+"<br>");
+document.write(moment().add({days:7,months:1}).format('YYYY-MM-DD')+"<br>");
+//diff() : 날짜.시간 차(ms)
+document.write(moment().subtract(1,'hours').format('HH:mm:ss')+"<br>");
+document.write(moment().subtract(10,'days').format()+"<br>");
+document.write("<br>");
+
+let b = moment('20220101','YYYYMMDD');
+let a = moment();
+
+document.write(a.diff(b)+"<br>");
+document.write(a.diff(b, 'days')+"<br>");
+document.write(a.diff(b, 'months')+"<br>");
+
+</script>
+</body>
+</html>

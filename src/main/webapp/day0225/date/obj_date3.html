@@ -2,25 +2,26 @@
 <meta charset='utf-8'>
 <script>
     function datesUntilNewYear() {
-        var now = new Date();
-        var newYear = new Date('January 1, ' + (now.getFullYear() + 1));
-        var diff = newYear - now;
-        var milliseconds = Math.floor(diff % 1000);
-        diff = diff / 1000;
-        var seconds = Math.floor(diff % 60);
-        diff = diff / 60;
-        var minutes = Math.floor(diff % 60);
-        diff = diff / 60;
-        var hours = Math.floor(diff % 24);
-        diff = diff / 24;
-        var days = Math.floor(diff);
+        let now = new Date();
+        let newYear = new Date('January 1, ' + (now.getFullYear() + 1));
+        let diff = newYear - now; // 날짜간의 차이를 밀리세컨드(ms)로 가져온다. 
+        // 1000/ms => 몫은 초가 된다. 나머지는 ms가 된다. 
+        let milliseconds = Math.floor(diff % 1000);
+        diff = diff / 1000; //초단위가 되는 것, seconds에.  
+        let seconds = Math.floor(diff % 60); 
+        diff = diff / 60; 
+        let minutes = Math.floor(diff % 60); 
+        diff = diff / 60; 
+        let hours = Math.floor(diff % 24); //시간값을 hours에 저장. 나머지 '시간'은 idiff에
+        diff = diff / 24; 
+        let days = Math.floor(diff);
 
-        var outStr = '내년도 신정까지' + days + '일, ' + hours + '시간, ' + minutes;
+        let outStr = '내년도 신정까지' + days + '일, ' + hours + '시간, ' + minutes;
         outStr += '분, ' + seconds + '초' + ' 남았습니다.';
 
         document.getElementById('remaining').innerHTML = outStr;
         // 1초가 지나면 다시 함수를 호출한다. 
-        setTimeout("datesUntilNewYear()", 1000);
+        setTimeout("datesUntilNewYear()", 1000); 
     }
 
     // 타이머를 시작한다. 
