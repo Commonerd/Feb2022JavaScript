@@ -1,4 +1,5 @@
 <div id='remaining'></div>
+<meta charset='utf-8'>
 <script>
     function datesUntilNewYear() {
         var now = new Date();
@@ -14,15 +15,15 @@
         diff = diff / 24;
         var days = Math.floor(diff);
 
-        var outStr = '³»³âµµ ½ÅÁ¤±îÁö ' + days + 'ÀÏ, ' + hours + '½Ã°£, ' + minutes;
-        outStr += 'ºĞ, ' + seconds + 'ÃÊ' + ' ³²¾Ò½À´Ï´Ù.';
+        var outStr = 'ë‚´ë…„ë„ ì‹ ì •ê¹Œì§€' + days + 'ì¼, ' + hours + 'ì‹œê°„, ' + minutes;
+        outStr += 'ë¶„, ' + seconds + 'ì´ˆ' + ' ë‚¨ì•˜ìŠµë‹ˆë‹¤.';
 
         document.getElementById('remaining').innerHTML = outStr;
-        // 1ÃÊ°¡ Áö³ª¸é ´Ù½Ã ÇÔ¼ö¸¦ È£ÃâÇÑ´Ù. 
+        // 1ì´ˆê°€ ì§€ë‚˜ë©´ ë‹¤ì‹œ í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•œë‹¤. 
         setTimeout("datesUntilNewYear()", 1000);
     }
 
-    // Å¸ÀÌ¸Ó¸¦ ½ÃÀÛÇÑ´Ù. 
+    // íƒ€ì´ë¨¸ë¥¼ ì‹œì‘í•œë‹¤. 
     datesUntilNewYear();
 </script>
 

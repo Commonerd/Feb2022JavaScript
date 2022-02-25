@@ -1,0 +1,15 @@
+﻿<div id='clock'></div>
+
+<script>
+    function setClock() {
+        let now = new Date();//now 객체만들고
+        //시간 가져옴. 분 가져옴. 초 가져옴. 그걸 s에 저장.
+        //html 안에서 클락이라는 아이디를 지닌 애에서 엘리먼트를 반환해서 > 그걸 s에 저장.
+        let s = now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds();
+        document.getElementById('clock').innerHTML = s;
+        setTimeout('setClock()', 1000);//일종의 타이머개념임. 해당시간이 지나면 실행할 함수.1000ms는 1초임. 1000/1000초.
+        //setLock()은 자기자신인 '재귀호출' 
+		//지정한 시간(ms)가 지나면 함수 호출. 
+    }
+    setClock();
+</script>
