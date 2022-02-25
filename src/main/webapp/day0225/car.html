@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	//Car 객체 생성
+	//speed, model, color, accel, brake 
+
+/* 	var Car = {
+		speed: 50,
+		model: 'sonata',
+		color: 'black',
+		function accel (speed) {
+			speed += speed;
+		}
+		function brake (speed) {
+			speed -= speed;
+		} 		
+	} */
+		
+	//1.리터럴방식 => 데이터 모아두는 용도로 많이 사용된다. 한 번만. 
+	let Car = {
+		speed: 0,
+		model:'audi A4',
+		color: "white",
+		accel: function(){this.speed +=10;},
+		brake: function(){this.speed -=10;}
+	};
+	Car.accel();
+	Car.accel();
+	document.write(Car.speed+"<br>");
+	
+	for(name in Car){
+		//프로퍼티 이름이 아니라, 이름과 값 짝지어 불러오기.
+		//위에서 name이라는 건 임의로 지정한 것임. 마음대로 지정해도 됨.
+		document.write(Car[name]+"<br>"); //대괄호 이용해서 변수 뽑아와야 한다. 		
+	}
+
+</script>
+</body>
+</html>

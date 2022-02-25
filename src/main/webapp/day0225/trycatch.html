@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>trycatch</title>
+</head>
+<body>
+<script>
+try{
+	allert("이 창은 alert입니다.");
+	//{{, 이렇게 문법적 오류는 캐치가 처리하지 못한다. 
+}catch(e) {//캐치에는 예외객체가 들어갈 수 있는 변수명을 넣는다. 
+	alert("예외 발생 : "+e.description);
+	document.write(e);
+}
+
+</script>
+</body>
+</html>
