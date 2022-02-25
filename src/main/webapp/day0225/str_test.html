@@ -3,11 +3,17 @@
 <head>
 <meta charset="utf-8">
 <title>Insert title here</title>
+
+</head>
+<body>
+<input id="id"/><span id="msg">한글 입력 안됨</span><br>
+<input type="button" value="확인" onclick="input_check()">
+
 <script>
 function input_check(){
 	var value = document.getElementById("id").value;
 	var patt = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/g; //한글로 입력한 전부 cf) [a-zA-Z] 알파벳 전부
-	var temp = patt.test(value);
+	var temp = patt.test(value); //지정한 패턴에 맞으면(한글이 하나라도 있으면) true, 없으면 false
 	if(temp){
 		document.getElementById("id").value = "";
 		document.getElementById("msg").style.color="red";
@@ -16,10 +22,6 @@ function input_check(){
 	}
 }
 </script>
-</head>
-<body>
-<input id="id"/><span id="msg">한글 입력 안됨</span><br>
-<input type="button" value="확인" onclick="input_check()">
 </body>
 </html>
 
