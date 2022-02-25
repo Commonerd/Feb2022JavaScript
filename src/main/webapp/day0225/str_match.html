@@ -1,8 +1,13 @@
 <meta charset="UTF-8">
 <script>
     str = 'Like father, like son. like';
-    // like�� ã�´�. i�� g�� �ɼ����� insensitive, globally�� �ǹ��Ѵ�. 
-    result = str.match(/like/ig);
+	// 매치는검색 용도로 많이 쓴다.
+	//like를 찾는다. i와 g는 옵션으로 insensitive, globally를 의미한다.
+	//str.match(/표현식/옵션)
+	// i : insensitive =>대소문자까지 구분안함
+	// g: globally => '전역' 여러 개 다 갖고 옴. g옵션 없으면 처음나오는 거 하나만 가져옴.
+	// 즉 g는 전체영역에서 다 찾아오는 애라고 이해하면 된다.
+    result = str.match(/abc/i);
     document.writeln(result + '<br>');
     
     
