@@ -8,8 +8,26 @@
 	<h1>Number Guess</h1>
 	<p>1부터 100사이의 숫자를 입력하시오</p>
 	<input id="number">
-	<button type="button">숫자 추측</button>
+	<button type="button" onclick="test()">숫자 추측</button>
 	<p id="message"></p>
-	
+	<script>
+		let solution = 77;
+		function test(){
+			let x = document.getElementById("number").value;
+			//아이디가 number인 애를 찾아서 밸류값을 갖고온다라는 의미
+			try{
+			if(x == "") throw "입력한 값 없음"; //해당예외발생순간
+			if (isNaN(x)) throw "숫자가 아님";
+			if (x > solution) throw "너무 큼";
+			if (x < solution) throw "너무 작음";
+			if (x == solution)	throw "성공";
+			}catch (e) { //캐치가 해당예외 받아 e로
+				let y = document.getElementById("message");
+				y.innerHTML = "힌트 : "+e
+				//message p태그에 예외메시지 삽입
+			}
+			
+		}
+	</script>
 </body>
 </html>
