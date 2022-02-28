@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+//JSON.stringify(객체, 변환함수, 공백수) 자바스크립트 객체 -> 문자열
+//JSON.parse(문자열) 문자열 -> 자바스크립트 객체
+
+/* const jsObj = [{name:'admin1', region:'서울', age=10,
+	myFunction : function(p1, p2) {return p1 *p2;}},
+	{name:'member1', region:'제주', age=20}];
+let outputA = JSON.stringify(jsObj);
+let outputB = Json.stringify(jsObj, null, 1);
+
+document.write(typeof outputA +"<br>"); //스트링
+document.write(outputA +"<br>"); //어드민1, 서울, 10, 펑션은 포함되지 않는다. 
+document.write(outputB +"<br>"); //멤버1, 제주, 20, 
+document.write("----------------<br>");
+
+let outputC = JSON.parse(outputA); //
+outputC.forEach(function(elt, i) {  //
+	for(person in elt) {
+		document.write(elt[person]);
+		document.write("<br>");
+	}
+}) */
+
+const jsObj = [,
+				{name:'member1', region:'제주', age:20}];
+let outputA	= JSON.stringify(jsObj);
+let outputB	= JSON.stringify(jsObj, null, 1);
+
+document.write(typeof outputA +"<br>");
+document.write(outputA+"<br>");
+document.write(outputB+"<br>");
+document.write('---------------------<br>');
+
+let outputC = JSON.parse(outputA); // 배열객체가 저장됨.()
+outputC.forEach(function(elt, i) { //배열객체니까 포이치 사용가능. 포인문도 무방.
+	//실행시 (펑션은 제외) 네임, 리젼, 에이지 세개만 꺼내와서, elt에 저장(element) i는 인덱스.
+	for(person in elt){ //객체니까 객체 안에 있는 프로퍼티 이름을 꺼내와서
+		document.write(elt[person]); //해당 프로퍼티에 매핑되어 있는 벨류값을 출력함. => 두 번째 객체도 뽑아오면 됨. 
+		document.write("<br>");
+	}
+})
+
+</script>
+</body>
+</html>
