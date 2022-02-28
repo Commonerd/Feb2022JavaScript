@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+    
+</head>
+<body id="target">
+
+    <form method="POST">
+        <input type="radio" name="C1" value="v1"  
+            onclick="changeColor('lightblue')">파랑색  
+            <!-- 클릭시 체인지컬러 실행 > 타겟, 즉 바디에 라이트블루 값을 뿌린다.  -->
+        <input type="radio" name="C1" value="v2"
+            onclick="changeColor('lightgreen')">녹색
+            <!--  클릭시 체인지 컬러 실행 > 타겟, 즉 바디에 라이트그린 값을 뿌린다. -->
+    </form>
+    <script>
+        function changeColor(c) {
+            document.getElementById("target").style.backgroundColor = c;
+
+        }
+    </script>
+</body>
+</html>
