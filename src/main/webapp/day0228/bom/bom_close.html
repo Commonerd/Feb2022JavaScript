@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form>
+		<input id="value" name="id" type="text"> 
+		<input type="button"
+			value="종료" onclick="win_close()">
+	</form>
+	<script type="text/javascript">
+	function win_close(){
+		let val = document.querySelector("#value").value;
+		opener.document.querySelector("#value").innerHTML= val;
+		self.close();
+		//opener => 나를 열어준 화면에서. 그 창의 문서(bom_open)에서. id가 value인 애를 찾는다. 
+		//해당태그 안쪽에 인풋태그에 입력된 값을 넣는다.
+		//opner->close->self 점검하시길~
+	}
+</script>
+</body>
+</html>
