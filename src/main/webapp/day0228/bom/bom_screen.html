@@ -1,3 +1,4 @@
+<meta charset='utf-8'>
 <script>
     function maxopen(url, winattributes) {
         var maxwindow = window.open(url, "", winattributes)
@@ -7,5 +8,6 @@
 
  </script>
  <a href="https://www.naver.com" 
- onClick="maxopen('https://www.google.com', 'resize=1, scrollbars=1, status=1'); return false;">
- ��ü ȭ�� ����</a>
+ onClick="maxopen('https://www.google.com', 'resize=1, scrollbars=1, status=1');return false;">
+ <!-- 자바스크립트에서 return false는 수행안하고 전부 스탑한다는 의미. 위에서는 네이버로 가지 않는다는 의이임. --> 
+ 전체 화면 보기</a>
