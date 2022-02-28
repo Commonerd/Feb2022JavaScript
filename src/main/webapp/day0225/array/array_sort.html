@@ -1,5 +1,21 @@
 ﻿<script>
-    var myArray = [10, 7, 23, 99, 169, 19, 11, 1];
-    myArray.sort()
+    let myArray = [10, 7, 23, 99, 169, 19, 11, 1];
+    myArray.sort(function(a,b) { 
+    	document.write(a+" "+b+"<br>"); //버블정렬
+    	return a - b});
     document.writeln(myArray);
+    //첫글자만 갖고 정렬
+    //소트는 '원본배열을 정렬'시킨다. 변경되어 있는 배열을 리턴해준다.
+    //음수 : b
+    //0 : ==
+    //양수: a 1자리 변경
+	document.writeln("<br><br>");
+    myArray.sort(function(a,b) { return b - a});//내림차순 정렬
+    document.writeln(myArray);
+    
+    document.writeln("<br><br>")
+    let myArray2 = ["나한테","search","금지","@"];
+    myArray2.sort()
+    document.writeln(myArray2);
+    
 </script>

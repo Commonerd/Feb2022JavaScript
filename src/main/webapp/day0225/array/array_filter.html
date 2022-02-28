@@ -1,10 +1,13 @@
+<meta charset="utf-8">
    <script>
        var numbers = [10, 20, 30, 40, 50];
-       //필터의 기준
+       //필터의 기준 true나 false가 리턴될 수 있는 펑션을 하나 아래에 만듦.
        function isBigEnough(element, index, array) {
-           return (element >= 30);
-       }
-
-       var filtered = numbers.filter(isBigEnough);
+           return (element >= 30);  //body안에서 엘리먼트만 쓰고있음.
+           //매개변수가 하나만 있어도 도니다. 배열 안에 있는 요소를 하나씩 넘겨주고, 그것갖고 처리한 다음에, 트루가 리턴됐을 떄 그것갖고 배열만듦. 배
+       } //매개변수1개일 경우, 2개일경우, 3개일경우(배열통째로 저장), 4개일경우(undefined가 될 것)
+ 		//filter(콜백함수)
+		// :콜백함수에서 true를 리턴하는 것으로만 새로운 배열을 만든다.)
+       let filtered = numbers.filter(isBigEnough); //콜백함수에서 트루를 리턴하는 요소만 남기겠다는 의미.
        document.write("필터링 된 배열: " + filtered);
     </script>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배열 출력</title>
+</head>
+<body>
+<script>
+	let arr = ['apple','banana','cherry'];
+	document.write(arr+"<br>");
+	// apple, banna, cherry
+	
+	for(f in arr){ //in배열 -> 인덱스 저장
+		// document.write(f+"<br>");  // 0,1,2
+		document.write(arr[f]+"<br>");//apple, banana, cherry
+	}
+	document.wrie("-------------------------");
+	//Array.forEach(콜백함수);
+	//Array.forEach((item, index)=>{}); //item에는 apple, banana, cherry; index에는 0,1,2
+	arr.forEach((item,index)=> {
+		document.write(index+" : "+item+"<br>");
+	}) //=>배열에는 콜백함수도 있고, 필터도 있다. 하나씩 꺼내서 지정한 함수 호출해주는 것. f
+	
+</script>
+</body>
+</html>
