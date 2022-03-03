@@ -1,0 +1,26 @@
+<html>
+<head>
+<meta charset='utf-8'>
+</head>
+<body>
+	<form name="myform1">
+		이름 : <input type="text" onFocus="showMessage(this, '이름을 입력하시오')" onblur="removeMessage(this)">
+		<span></span><br>
+	    나이 : <input type="text" onFocus="showMessage(this, '나이를 입력하시오')">
+	    <span></span> <br>
+		주소 : <input type="text" onFocus="showMessage(this, '주소를 입력하시오')">
+		<span></span>
+	</form>
+	<script>
+		function (input, str) {
+			// 줄바꿈, 공백이 없는 경우
+			// input.nextSibling.innerHTML = str;
+			// 줄바꿈, 공백이 있는 경우
+			input.nextSibling.innerHTML = str;
+		}
+		function removeMessage(input) {
+			input.nextSibling.nextSibling.innerHTML="";
+		}
+	</script>
+</body>
+</html>

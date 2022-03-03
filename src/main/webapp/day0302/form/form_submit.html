@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<meta charset='utf-8'>
+<head>
+<script >
+	function beforeSubmit() {
+		return confirm("데이터를 정말로 보낼까요?")
+	}
+</script>
+</head>
+<body>
+	<form name="myform" action="save.asp" 
+	onSubmit="return beforeSubmit()"> <!-- 온서브밋이 붙어있으면, 아래 서브밋 버튼 눌렀을때, 온서브밋이 먼저 동작한다. -->
+		이름 : <input type="text" name="irum">
+		<input type="submit">
+	</form>
+</BODY>
+</html>
